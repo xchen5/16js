@@ -1,7 +1,0 @@
-var addElement = function(e) {
-    var list = document.getElementByTagName('ol');
-    list.appendChild('<li> added element! </li>');
-}
-
-var b = document.getElementById('b');
-b.addEventListener('click', addElement);
