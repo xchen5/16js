@@ -1,15 +1,16 @@
 var addElement = function(e) {
     var list = document.getElementById('thelist');
     //console.log(list);
-    
+
     var element = document.createElement('li');
     element.innerHTML = 'Stuff';
 
     //mouseover
     element.addEventListener('mouseover',changeHeading);
     element.addEventListener('mouseout',changeBack);
-    
+
     list.appendChild(element);
+    removeElement();
 }
 
 var addMouseover = function(){
@@ -26,7 +27,7 @@ var addMouseover = function(){
 
 var changeHeading = function(e) {
     var headings = document.getElementsByTagName('h1');
-    var h = headings[0];   
+    var h = headings[0];
     h.innerHTML = e.srcElement.innerText;
 }
 
@@ -39,3 +40,17 @@ var b = document.getElementById('b');
 b.addEventListener('click', addElement);
 
 addMouseover();
+
+var removeElement = function(){
+  var listElements = document.getElementsByTagName("LI");
+  for (var i = 0; i < listElements.length; i++) {
+    listElements[i].addEventListener('click', remove);
+  }
+};
+
+var remove = function(e){
+    var list = document.getElementById("thelist");
+    list.removeChild(this);
+  };
+
+removeElement();
