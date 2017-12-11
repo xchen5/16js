@@ -55,16 +55,8 @@ var remove = function(e){
 
 removeElement();
 
-/*var fibonacci = function(n){
-  if (n <= 1){
-    return 1;
-  }
-  else
-   {
-     return fibonacci(n - 1) + fibonacci(n - 2);
-   }
-   };*/
 
+//second list
 var fibonacci = function (n){
   var a = 1, b = 1;
   
@@ -79,20 +71,14 @@ var fibonacci = function (n){
 
 fibNum = 1;
 
-
 var addFib= function(e){
     var list = document.getElementById('theSecond');
-    //console.log(list);
 
     var element = document.createElement('li');
     element.innerHTML = fibonacci(fibNum);
     fibNum++;
-    //mouseover
-  //  element.addEventListener('mouseover',changeHeading);
-  //  element.addEventListener('mouseout',changeBack);
 
     list.appendChild(element);
-    //removeElement();
 }
 
 
