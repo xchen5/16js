@@ -54,3 +54,35 @@ var remove = function(e){
   };
 
 removeElement();
+
+var fibonacci = function(n){
+  if (n <= 1){
+    return 1;
+  }
+  else
+   {
+     return fibonacci(n - 1) + fibonacci(n - 2);
+   }
+};
+
+fibNum = 0;
+
+
+var addFib= function(e){
+    var list = document.getElementById('theSecond');
+    //console.log(list);
+
+    var element = document.createElement('li');
+    element.innerHTML = fibonacci(fibNum);
+    fibNum++;
+    //mouseover
+  //  element.addEventListener('mouseover',changeHeading);
+  //  element.addEventListener('mouseout',changeBack);
+
+    list.appendChild(element);
+    //removeElement();
+}
+
+
+var b2 = document.getElementById('b2');
+b2.addEventListener('click', addFib);
