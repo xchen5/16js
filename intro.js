@@ -55,7 +55,7 @@ var remove = function(e){
 
 removeElement();
 
-var fibonacci = function(n){
+/*var fibonacci = function(n){
   if (n <= 1){
     return 1;
   }
@@ -63,9 +63,21 @@ var fibonacci = function(n){
    {
      return fibonacci(n - 1) + fibonacci(n - 2);
    }
-};
+   };*/
 
-fibNum = 0;
+var fibonacci = function (n){
+  var a = 1, b = 1;
+  
+  while (n >= 2){
+    var temp = a;
+    a = a + b;
+    b = temp;
+    n--;
+  }
+  return b;
+}
+
+fibNum = 1;
 
 
 var addFib= function(e){
